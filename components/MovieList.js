@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef, useEffect, useCallback } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import MovieCard from "./MovieCard";
@@ -47,8 +47,8 @@ const MovieList = ({ title, movies }) => {
   }, [checkArrows]);
 
   return (
-    <div className="my-8 relative">
-      <h2 className="text-2xl font-semibold mb-4 px-4">{title}</h2>
+    <div className="my-8 relative px-4 md:px-8">
+      <h2 className="text-xl md:text-2xl font-semibold mb-4">{title}</h2>
       <div className="relative">
         <div
           ref={containerRef}
@@ -62,20 +62,20 @@ const MovieList = ({ title, movies }) => {
           <Button
             variant="ghost"
             size="icon"
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-background/80"
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-background/80 hidden md:flex"
             onClick={() => handleScroll("left")}
           >
-            <ChevronLeft className="h-10 w-10" />
+            <ChevronLeft className="h-8 w-8" />
           </Button>
         )}
         {showRightArrow && (
           <Button
             variant="ghost"
             size="icon"
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-background/80"
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-background/80 hidden md:flex"
             onClick={() => handleScroll("right")}
           >
-            <ChevronRight className="h-10 w-10" />
+            <ChevronRight className="h-8 w-8" />
           </Button>
         )}
       </div>
