@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Input } from "@/components/ui/input";
 import { ModeToggle } from "@/components/mode-toggle";
+import { Logo } from "./Logo";
 
 const Topbar = () => {
   const [showSearch, setShowSearch] = useState(false);
@@ -22,7 +23,7 @@ const Topbar = () => {
       <nav className="flex items-center justify-between p-4">
         <div className="flex items-center space-x-6">
           <Link href="/" className="text-2xl font-bold">
-            StreamHeaven
+            <Logo />
           </Link>
           <div className="hidden md:flex items-center space-x-6">
             <Link href="/" className="text-sm">
