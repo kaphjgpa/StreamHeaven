@@ -22,7 +22,7 @@ const Topbar = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <nav className="flex items-center justify-between p-4">
         <div className="flex items-center space-x-6">
-          <Link href="/" className="text-2xl font-bold">
+          <Link href="/">
             <Logo />
           </Link>
           <div className="hidden md:flex items-center space-x-6">
